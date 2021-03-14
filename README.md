@@ -1,6 +1,5 @@
 # project-refactor
-<<<<<<< HEAD
-=======
+
 
 
 ![Horiseon_image](https://user-images.githubusercontent.com/61722709/111056782-b124a000-8436-11eb-8ca1-eef6188b79c7.png)
