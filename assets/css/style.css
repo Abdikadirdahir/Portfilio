@@ -5,13 +5,13 @@
 }
 
 body {
-    background-color: #d9dcd6;
+    background-color: black;
 }
 
 .header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #2a607c;
+    background-color:black;
     color: #ffffff;
 }
 
@@ -50,11 +50,11 @@ p {
     font-size: 16px;
 }
 
-.hero {
+.bill {
     height: 800px;
     width: 100%;
     margin-bottom: 25px;
-    background-image: url("https://ucsd.bootcampcontent.com/UCSD-Coding-Bootcamp/ucsd-sd-fsf-pt-03-2021-u-c/-/raw/master/01-HTML-Git-CSS/02-Homework/Develop/assets/images/digital-marketing-meeting.jpg") ;
+    background-image: url("./picture-of-me.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -69,121 +69,121 @@ p {
     margin-left: 25px;
 }
 
-.content {
+.Bill {
     width: 75%;
     display: inline-block;
     margin-left: 20px;
 }
 
-.benefits {
+.Abdikadir {
     margin-right: 20px;
     padding: 20px;
     clear: both;
     float: right;
     width: 20%;
     height: 100%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #2589bd;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: gray;
 }
 
-.benefit-lead {
+.personal-info{
     margin-bottom: 32px;
-    color: #ffffff;
+    color: black;
 }
 
-.benefit-brand {
+.hobbies {
     margin-bottom: 32px;
-    color: #ffffff;
+    color: black;
 }
 
-.benefit-cost {
+.skills {
     margin-bottom: 32px;
-    color: #ffffff;
+    color: black;
 }
 
-.benefit-lead h3 {
+.personal-info h3 {
     margin-bottom: 10px;
     text-align: center;
 }
 
-.benefit-brand h3 {
+.hobbies h3 {
     margin-bottom: 10px;
     text-align: center;
 }
 
-.benefit-cost h3 {
+.skills h3 {
     margin-bottom: 10px;
     text-align: center;
 }
 
-.benefit-lead img {
+.personal-info img {
     display: block;
     margin: 10px auto;
     max-width: 150px;
 }
 
-.benefit-brand img {
+.hobbies img {
     display: block;
     margin: 10px auto;
     max-width: 150px;
 }
 
-.benefit-cost img {
+.skills img {
     display: block;
     margin: 10px auto;
     max-width: 150px;
 }
 
-.search-engine-optimization {
+.about {
     margin-bottom: 20px;
     padding: 50px;
     height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: gray;
+    color: black;
 }
 
-.online-reputation-management {
+.previous {
     margin-bottom: 20px;
     padding: 50px;
     height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: gray;
+    color: black;
 }
 
-.social-media-marketing {
+.contact {
     margin-bottom: 20px;
     padding: 50px;
     height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: gray;
+    color: black;
 }
 
-.search-engine-optimization img {
+.about img {
     max-height: 200px;
 }
 
-.online-reputation-management img {
+.previous img {
     max-height: 200px;
 }
 
-.social-media-marketing img {
+.contact img {
     max-height: 200px;
 }
 
-.search-engine-optimization h2 {
+.about h2 {
     margin-bottom: 20px;
     font-size: 36px;
 }
 
-.online-reputation-management h2 {
+.previous h2 {
     margin-bottom: 20px;
     font-size: 36px;
 }
 
-.social-media-marketing h2 {
+.contact h2 {
     margin-bottom: 20px;
     font-size: 36px;
 }
@@ -193,8 +193,36 @@ p {
     clear: both;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
+    background-color: gray;
+    color: black;
 }
 
 .footer h2 {
     font-size: 20px;
 }
+
+@media screen and (min-width: 768px) {
+   
+    .card-column {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  
+    
+    .card-column:last-child {
+      flex-grow: 1;
+    }
+  }
+  
+  
+  @media screen and (min-width: 992px) {
+    header {
+      width: 75%;
+    }
+  
+    .card-column {
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+    }
+  }
+  

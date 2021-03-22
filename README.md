@@ -1,10 +1,20 @@
-# project-refactor
+# portfilo
+I have meet the user story
+
+GIVEN I need to sample a potential employee's previous work
+WHEN I load their portfolio
+THEN I am presented with the developer's name, a recent photo, and links to sections about them, their work, and how to contact them
+WHEN I click one of the links in the navigation
+THEN the UI scrolls to the corresponding section
+WHEN I click on the link to the section about their work
+THEN the UI scrolls to a section with titled images of the developer's applications
+WHEN I am presented with the developer's first application
+THEN that application's image should be larger in size than the others
+WHEN I click on the images of the applications
+THEN I am taken to that deployed application
+WHEN I resize the page or view the site on various screens and devices
+THEN I am presented with a responsive layout that adapts to my viewport
+```
 
 
 
-![Horiseon_image](https://user-images.githubusercontent.com/61722709/111056782-b124a000-8436-11eb-8ca1-eef6188b79c7.png)
-
-![Horiseon_image_2](https://user-images.githubusercontent.com/61722709/111056786-bd106200-8436-11eb-81f5-0f1b19a6b67f.png)
-
-![heriseon_image_3](https://user-images.githubusercontent.com/61722709/111056775-a407b100-8436-11eb-8feb-aa2d84e87eb8.png)
->>>>>>> 61b535ce7ca827b69a7aed13f99a87e7530fb488
