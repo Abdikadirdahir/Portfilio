@@ -13,6 +13,7 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color:black;
     color: #ffffff;
+    border-bottom: 5px white solid;
 }
 
 .header h1 {
@@ -57,6 +58,7 @@ p {
     background-image: url("./picture-of-me.jpg");
     background-size: cover;
     background-position: center;
+    border-bottom: 5px white solid ;
 }
 
 .float-left {
@@ -83,22 +85,23 @@ p {
     width: 20%;
     height: 100%;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: gray;
+    background-color: black;
+    border: 5px white solid;
 }
 
 .personal-info{
     margin-bottom: 32px;
-    color: black;
+    color:white;
 }
 
 .hobbies {
     margin-bottom: 32px;
-    color: black;
+    color: white;
 }
 
 .skills {
     margin-bottom: 32px;
-    color: black;
+    color: white;
 }
 
 .personal-info h3 {
@@ -139,8 +142,9 @@ p {
     padding: 50px;
     height: 300px;
     font-family:Arial, Helvetica, sans-serif;
-    background-color: gray;
-    color: black;
+    background-color: black;
+    color: white;
+    border: 5px white solid;
 }
 
 .previous {
@@ -148,8 +152,9 @@ p {
     padding: 50px;
     height: 300px;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: gray;
-    color: black;
+    background-color:black;
+    color:white;
+    border: 5px white solid;
 }
 
 .contact {
@@ -157,8 +162,9 @@ p {
     padding: 50px;
     height: 300px;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: gray;
-    color: black;
+    background-color:black;
+    color:white;
+    border: 5px white solid;
 }
 
 .about img {
@@ -193,8 +199,9 @@ p {
     clear: both;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
-    background-color: gray;
-    color: black;
+    background-color:black;
+    color:white;
+    border-top: 5px white solid;
 }
 
 .footer h2 {
