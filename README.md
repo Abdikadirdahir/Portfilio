@@ -6,9 +6,10 @@ technology used
 hmtl
 css
 google fonts
-![abdikadir_1](https://user-images.githubusercontent.com/61722709/116804121-2aed1780-aad1-11eb-9870-faaff1c53a7a.png)
-![abdikadir_2](https://user-images.githubusercontent.com/61722709/116804124-304a6200-aad1-11eb-8af9-72d715d51280.png)
-![abdikadir_3](https://user-images.githubusercontent.com/61722709/116804126-33455280-aad1-11eb-93b9-ff661d64db20.png)
+![abdi_1](https://user-images.githubusercontent.com/61722709/116804289-87046b80-aad2-11eb-9936-e4a6b7c71a45.png)
+![abdi_2](https://user-images.githubusercontent.com/61722709/116804291-88ce2f00-aad2-11eb-8280-9facf69b93d0.png)
+![abdi_3](https://user-images.githubusercontent.com/61722709/116804293-8a97f280-aad2-11eb-9242-0f5428535e4b.png)
+
 
 updated portfilio
 
