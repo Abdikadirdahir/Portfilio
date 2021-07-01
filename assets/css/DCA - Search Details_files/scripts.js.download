@@ -1,0 +1,48 @@
+// State of California master template
+// Version 2010.11.05
+
+// addLoadEvent by Simon Willison
+// Adds a handler to an event without over-riding other handlers
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+
+// get URL parameter
+function gup( name ) {
+	name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+	var regexS = "[\\?&]"+name+"=([^&#]*)";
+	var regex = new RegExp( regexS );
+	var results = regex.exec( window.location.href );
+	if( results == null )
+		return "";
+	else
+		return results[1];
+}
+
+//Disclaimer Popup
+
+//The class you click to trigger the popup 
+$('.letspop').on('click', function() {
+// The Overlay fades in
+$(".overlay").fadeIn(200, function() {});
+// The Popup fades in just after
+$(".popup").fadeIn(600, function() {});
+});
+
+//The class's you click when you want to close the pop
+$('.overlay, .close').on('click', function() {
+// The Overlay fades out slower
+$(".overlay").fadeOut(600, function() {});
+// The Popup fades out faster
+$(".popup").fadeOut(200, function() {});
+});

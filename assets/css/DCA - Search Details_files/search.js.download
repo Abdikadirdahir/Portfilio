@@ -1,0 +1,413 @@
+//added to make IE understand string that startsWith -- used in the show hint function
+if (!String.prototype.startsWith) {
+  String.prototype.startsWith = function(searchString, position) {
+    position = position || 0;
+    return this.indexOf(searchString, position) === position;
+  };
+}
+
+/***************** Load only CA on initial button click to show all advance search ****************/	
+
+$(document).ready(function() {
+	$(".notCA").css("display", "none");
+});	
+function showNonCA()
+{
+	document.getElementById("overlay").style.display  = "block";
+	setTimeout(function () {
+	if (!$('.notCA').is(':visible')){
+		
+		$(".notCA").css("display", "block");
+		//$("#toggleCA").value = "Show only California cities and counties";
+		$("#toggleCA").prop('value', 'Show only California'); //versions newer than 1.6
+
+	}
+	else{
+		$(".notCA").css("display", "none");
+//		$("#toggleCA").value = "Show Non-California cities and counties";
+		$("#toggleCA").prop('value', 'Show Non-California'); //versions newer than 1.6
+	}	
+	}, 2000);
+	setTimeout(function () {
+		document.getElementById("overlay").style.display  = "none";
+	    }, 3000);
+}
+
+/***************** Click events to open filter selects ****************/	
+$(document).ready(function () {
+	  
+	  var $expandable1 = $('.1e');
+	  var $content1 = $('.1ec');
+	  var $opener1 = $('.1ots');
+	  var $inner1 = $('.1eci');
+	  var contentHeight1 = $inner1.outerHeight(true);
+	  
+	  $opener1.on('click', function () {
+	    $expandable1.toggleClass('is-opened');
+	    
+	    $content1.height($expandable1.hasClass('is-opened') ? contentHeight1 : 0);
+	  });
+	  
+	  var $expandable2 = $('.2e');
+	  var $content2 = $('.2ec');
+	  var $opener2 = $('.2ots');
+	  var $inner2 = $('.2eci');
+	  var contentHeight2 = $inner2.outerHeight(true);
+	  
+	  $opener2.on('click', function () {
+	    $expandable2.toggleClass('is-opened');
+	    
+	    $content2.height($expandable2.hasClass('is-opened') ? contentHeight2 : 0);
+	  });
+	  
+	  var $expandable3 = $('.3e');
+	  var $content3 = $('.3ec');
+	  var $opener3 = $('.3ots');
+	  var $inner3 = $('.3eci');
+	  var contentHeight3 = $inner3.outerHeight(true);
+	  
+	  $opener3.on('click', function () {
+	    $expandable3.toggleClass('is-opened');
+	    
+	    $content3.height($expandable3.hasClass('is-opened') ? contentHeight3 : 0);
+	  });
+	  
+	  var $expandable4 = $('.4e');
+	  var $content4 = $('.4ec');
+	  var $opener4 = $('.4ots');
+	  var $inner4 = $('.4eci');
+	  var contentHeight4 = $inner4.outerHeight(true);
+	  
+	  $opener4.on('click', function () {
+	    $expandable4.toggleClass('is-opened');
+	    
+	    $content4.height($expandable4.hasClass('is-opened') ? contentHeight4 : 0);
+	  });
+	  
+	  var $expandable5 = $('.5e');
+	  var $content5 = $('.5ec');
+	  var $opener5 = $('.5ots');
+	  var $inner5 = $('.5eci');
+	  var contentHeight5 = $inner5.outerHeight(true);
+	  
+	  $opener5.on('click', function () {
+	    $expandable5.toggleClass('is-opened');
+	    
+	    $content5.height($expandable5.hasClass('is-opened') ? contentHeight5 : 0);
+	  });
+	  
+	  var $expandable6 = $('.6e');
+	  var $content6 = $('.6ec');
+	  var $opener6 = $('.6ots');
+	  var $inner6 = $('.6eci');
+	  var contentHeight6 = $inner6.outerHeight(true);
+	  
+	  $opener6.on('click', function () {
+	    $expandable6.toggleClass('is-opened');
+	    
+	    $content6.height($expandable6.hasClass('is-opened') ? contentHeight6 : 0);
+	  });					  
+	
+	});
+
+
+//sets the last name required if a first name is put in
+//function checkLastName(){
+//	if($('#firstName').val() != '' && $('#lastName').val() == ''){
+//		//alert('yo');
+//		$("#lastName").prop('required',true);
+//	}
+//	else{
+//		$("#lastName").prop('required',false);
+//	}
+//}
+
+function checkNameBoxes(){
+	
+	if($("#busName").val() != ''){
+		$("#firstName").prop('disabled',true);
+		$("#lastName").prop('disabled',true);
+		
+	}
+	else{
+		$("#firstName").prop('disabled',false);
+		$("#lastName").prop('disabled',false);
+	}
+	if($('#firstName').val() != ''){
+		//alert('yo');
+		$("#busName").prop('disabled',true);
+	
+	}
+	else{
+		$("#busName").prop('disabled',false);
+	}
+//	if($('#firstName').val() != '' && $('#lastName').val() == ''){
+//	//alert('yo');
+//		$("#lastName").prop('required',true);
+//	}
+//	else{
+//		$("#lastName").prop('required',false);
+//	}
+}
+/***************** Click events to open search functions ****************/	
+function showSearch_click(clicked_name)
+{                                                                                                                              
+
+                if(clicked_name =="board")
+                {
+                                document.getElementById("boardCode").focus();
+                }
+                if(clicked_name =="licType")
+                {
+                                document.getElementById("licenseType").focus();
+                }
+                if(clicked_name =="licNum")
+                {
+                                document.getElementById("licenseNumber").focus();
+                }
+                if(clicked_name =="fName")
+                {
+                                document.getElementById("firstName").focus();
+                }
+                if(clicked_name =="lName")
+                {
+                                document.getElementById("lastName").focus();
+                }
+                if(clicked_name =="bName")
+                {
+                                document.getElementById("busName").focus();
+                }
+                if(clicked_name =="srchSubmitHome")
+                {
+                	var showLoad = false;
+                	if($('#firstName').val() != '' && $('#lastName').val() == ''){
+            		//alert('yo');
+            			$("#lastName").prop('required',true);
+            			
+            			
+            		}
+            		else{
+            			$("#lastName").prop('required',false);            			
+            			showLoad = true;
+            		}
+
+                	
+                			if(showLoad){
+                              document.getElementById("overlay").style.display  = "block";
+                              document.getElementById("header").style.zIndex = "-10";
+                			}
+                                
+                }
+                 if(clicked_name =="clearHome")
+                {
+                                document.getElementById("boardCode").selectedIndex  = "";
+                                changeTheBoard();
+                                document.getElementById("licenseType").selectedIndex  = "";
+                                $('#licenseNumber').val("");
+//                                $('#allName').val("");
+//                                $('#licenseNumber').val("");
+                                $('#busName').val("");
+                                $('#firstName').val("");
+                                $('#lastName').val("");
+//                               
+                                $("#firstName").prop('disabled',false);
+                        		$("#lastName").prop('disabled',false);
+                        		$("#busName").prop('disabled',false);
+                        		
+                                changeBoard();
+                                
+                                                
+                } 
+                 if(clicked_name =="clearAdv")
+                 {
+                	 
+//                	 $('form').each(function() {
+//                		    this.reset();
+//                		});
+                                 $("#boardCode").val("");
+                                 $("#licenseType").val("");
+                                 $('#licenseNumber').val("");
+                                 $('#firstName').val("");
+                                 $('#lastName').val("");
+                                 $('#allName').val("");
+                                 $('#busName').val("");
+                                 $('#cities').val("");
+                                 $('#counties').val("");
+                                 $('#primaryStatusCodes').val("");
+                                 $('#hasDiscipline').val("");
+                                 $('#hasPRA').val("");
+                                 $('#hasDocuments').val("");
+                                 
+                                
+                                 changeBoard();
+                                 showAllTheCities("clear");
+                                 licTypeBoxSet();
+                                 secStatBoxSet();
+                                                 
+                 } 
+}                      
+
+/***************** Show Result Counts ****************/									
+ 	function showResultCount(vRs,tRs)  {		
+		var element =  document.getElementById('results');
+		if (typeof(element) != 'undefined' && element != null)
+		{			 
+			//document.getElementById("results").innerHTML = "Showing: " + $(vRs).length+ " of "+$(tRs).length;//original
+			document.getElementById("results").innerHTML = "(Showing " + (($(vRs).length)-$(tRs).length) + ")";
+		}
+	 }//end showResultCount function
+		
+	$( document ).ready(function() {
+		//showResultCount(".post:visible",".post");				
+		showResultCount(".post:visible",".doNotCount:visible");				
+	});						
+				
+				
+
+
+/***************** Load More when user at bottom of the screen ****************/
+
+$(window).scroll(function() {
+	
+	if($(window).scrollTop() + $(window).height() >= ($(document).height()) - $("#footer").height())
+	{
+		$(".post").slice(0, $(".post:visible").length+10).show();//.attr( "aria-hidden", "false" );
+		showResultCount(".post:visible",".doNotCount:visible");	
+	}
+});
+
+
+/***************** Change Lic Type for Board Selected ****************/		
+function changeBoard(){
+	
+	var licType = $("#licenseType option:selected").val();
+	var boardCode = $("#boardCode option:selected").val();
+	
+	var mlicType = $("#licenseTypeM option:selected").val();
+	var mboardCode = $("#boardCodeM option:selected").val();
+			
+	
+		if(boardCode !='0')
+		{
+			$("#licenseType").val('0');
+			$('optgroup[id="b'+boardCode+'"]').show(); 
+			$('optgroup[id!="b'+boardCode+'"]').hide();
+//			$('optgroup[id="b'+boardCode+'"]').showOptionGroupHome(); 
+//			$('optgroup[id!="b'+boardCode+'"]').hideOptionGroupHome();
+		}
+		else
+		{
+			$("#licenseType").val('0');
+			$('optgroup[id="b'+boardCode+'"]').show(); 
+			$('optgroup[id!="b'+boardCode+'"]').show(); 
+//			$('optgroup[id="b'+boardCode+'"]').showOptionGroupHome(); 
+//			$('optgroup[id!="b'+boardCode+'"]').showOptionGroupHome(); 
+		}
+}
+
+
+
+
+$.fn.hideOptionGroupHome = function() {
+	 $(this).hide();
+	 $(this).children().each(function(){
+	 $(this).attr("disabled", "disabled").removeAttr("selected");
+	 });
+	 $(this).attr("disabled", "disabled");
+	 $(this).appendTo($(this).parent());
+
+	}
+
+	$.fn.showOptionGroupHome = function() {
+	 $(this).show();  
+	 $(this).children().each(function(){
+	 $(this).removeAttr("disabled" );
+	 });
+	 $(this).removeAttr("disabled" );
+	 $(this).prependTo($(this).parent());
+	 $(this).parent().animate({scrollTop:0},0);
+	 $('#defaultLT').insertBefore($(this));
+	}
+	
+
+function changeBoardMobile(){
+
+	var licTypeM = $("#licenseTypeM option:selected").val();
+	var boardCodeM = $("#boardCodeM option:selected").val();
+	
+	
+		if(boardCodeM !='0')
+		{
+			$("#licenseTypeM").val('0');
+			$('optgroup[id="b'+boardCodeM+'"]').css("display","block");
+			$('optgroup[id!="b'+boardCodeM+'"]').css("display","none");
+		}
+		else
+		{
+			$("#licenseTypeM").val('0');
+			$('optgroup[id="b'+boardCodeM+'"]').css("display","block");
+			$('optgroup[id!="b'+boardCodeM+'"]').css("display","block");
+		}
+
+}
+		
+		
+		
+/***************** Click events to open/Close Physician  Survey fields ****************/	
+function showPhysSearch_click()
+{                                                                                                                              
+	if (document.getElementById('physSurvey').style.display == 'none')
+	{document.getElementById('physSurvey').style.display = 'block';}
+	else
+	{document.getElementById('physSurvey').style.display = 'none';}
+              
+}         
+
+/***************** Click events to open/Close Hints ****************/	
+function openHint(hintID)
+{              
+	//hintStatus1
+	var theRecordNumber = hintID.substring(10);
+	var hintID = hintID.toString();
+	
+    if(hintID== "hintStatus"){
+        if(document.getElementById("statusHint").style.display == "none"){
+        	document.getElementById("statusHint").style.display = "block";
+        }
+        else
+    	{
+        	document.getElementById("statusHint").style.display = "none";
+    	}
+    }
+    else if (hintID.startsWith('hintStatus')){
+    	if(document.getElementById("statusHint" + theRecordNumber).style.display == "none"){
+        	document.getElementById("statusHint" + theRecordNumber).style.display = "block";
+        }
+        else
+    	{
+        	document.getElementById("statusHint" + theRecordNumber).style.display = "none";
+    	}
+	}
+    else if (hintID.startsWith('hintSecStatus')){
+    	theRecordNumber = hintID.substring(13);
+    	if(document.getElementById("secStatusHint" + theRecordNumber).style.display == "none"){
+        	document.getElementById("secStatusHint" + theRecordNumber).style.display = "block";
+        }
+        else
+    	{
+        	document.getElementById("secStatusHint" + theRecordNumber).style.display = "none";
+    	}
+    }
+    else if (hintID.indexOf('_hintStatus')!=-1){
+    	theRecordNumber = hintID.charAt(0);
+    	if(document.getElementById(theRecordNumber + "_statusHint").style.display == "none"){
+        	document.getElementById(theRecordNumber + "_statusHint").style.display = "block";
+        }
+        else
+    	{
+        	document.getElementById(theRecordNumber + "_statusHint").style.display = "none";
+    	}
+    }
+              
+}  
+

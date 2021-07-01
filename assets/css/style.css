@@ -82,6 +82,7 @@ p {
 
 .about {
     margin-bottom: 20px;
+    flex-wrap: wrap;
     width: 100%;
     padding: 50px;
     height: 300px;
@@ -102,6 +103,7 @@ p {
 }
 
 .contact {
+    display: flexbox;
     margin-bottom: 20px;
     padding: 50px;
     height: 300px;
@@ -130,12 +132,12 @@ p {
 
 .previous h2 {
     margin-bottom: 20px;
-    font-size: 36px;
+    font-size: 16px;
 }
 
 .contact h2 {
     margin-bottom: 20px;
-    font-size: 36px;
+    font-size: 16px;
 }
 
 .footer {
@@ -152,28 +154,37 @@ p {
     font-size: 20px;
 }
 
-@media screen and (min-width: 768px) {
-   
-    .card-column {
-      flex: 0 0 50%;
-      max-width: 50%;
-    }
-  
-    
-    .card-column:last-child {
-      flex-grow: 1;
-    }
-  }
-  
-  
-  @media screen and (min-width: 992px) {
+@media screen and (max-width: 980px) {
     header {
-      width: 75%;
+      padding: 0 0 10px 0;
+      justify-content: center;
+      text-align: center;
     }
   
-    .card-column {
-      flex: 0 0 33.333%;
-      max-width: 33.333%;
+    header h1 {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      font-size: 10vw;
+    }
+  
+    header nav {
+      justify-content: center;
+    }
+  
+    .Bill > h2,
+    .Bill > div {
+      flex: 0 0 100%;
+    }
+  
+    .Bill > h2 {
+      border-right: none;
+      border-bottom: 4px solid var(--primary);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      text-align: left;
+      font-size: 7vw;
     }
   }
+  
   
